@@ -42,9 +42,16 @@ export default function Home() {
 
   const contentNew = {
     new1: t('new1'),
-    new2: t('new2')
+    new2: t('new2'),
+    new3: t('new3'),
+    new4: t('new4'),
+    new5: t('new5'),
+    new6: t('new6'),
+    new7: t('new7'),
+    new8: t('new8'),
+    new9: t('new9'),
+    new10: t('new10'),
   }
-
 
   return (
     <>

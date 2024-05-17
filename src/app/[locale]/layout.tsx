@@ -21,17 +21,17 @@ export default function RootLayout({
   const t = useTranslations('Index')
 
   const contentHeader = {
-    menu1 : t('menu1'),
-    menu2 : t('menu2'),
-    menu3 : t('menu3'),
-    menu4 : t('menu4'),
-    menu5 : t('menu5'),
+    menu1: t('menu1'),
+    menu2: t('menu2'),
+    menu3: t('menu3'),
+    menu4: t('menu4'),
+    menu5: t('menu5'),
     warning: t('warning'),
     goto: t('goto'),
     cancel: t('cancel'),
   }
 
-  
+
   const contentFooter = {
     footer1: t('footer1'),
     footer2: t('footer2'),
@@ -53,12 +53,17 @@ export default function RootLayout({
     <html lang={locale}>
       <body>
         <div >
-          <div className="container md:mx-auto ">
-          <MyHeader t={contentHeader}/>
+          <div className="w-full h-[81px] fixed bg-white z-50 top-0">
+            <div className="container md:mx-auto ">
+              <MyHeader t={contentHeader} />
+            </div>
           </div>
+
+          <div className="mt-[81px]">
           {children}
+          </div>
           <div className="container md:mx-auto ">
-          <MyFooter contentFooter={contentFooter}/>
+            <MyFooter contentFooter={contentFooter} />
           </div>
         </div>
       </body>

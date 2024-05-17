@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import MyLayout from "../Layout/Layout";
-import Logo from '../../../public/logo.png'
+import Logo from '../../../public/logo.svg'
 import FB from '../../../public/fb.svg'
 import YT from '../../../public/yt.svg'
 import Link from '../../../public/link.svg'
@@ -91,7 +91,7 @@ export default function MyFooter({contentFooter}:any) {
             </a>
           </div>
 
-          <div className="mt-[30px] lg:mt-0">
+          <div className="mt-[30px] lg:mt-0 text-right">
             <div className="text-[#555555] font-normal">© {new Date().getFullYear()} DTAK DIGITAL SOLUTIONS CO.,LTD. All rights reserved</div>
             <div className="text-[#555555] font-normal">{contentFooter.footer10} | MST: 0110696855</div>
           </div>

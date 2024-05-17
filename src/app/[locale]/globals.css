@@ -139,7 +139,7 @@ border-bottom: 2px solid #333
 .cool-link {
   cursor: pointer;
   display: inline-block;
-  color: #000;
+  color: #111827;
   text-decoration: none;
 }
 
@@ -155,4 +155,8 @@ border-bottom: 2px solid #333
 .cool-link:hover::after {
   width: 100%;
  transition: width .3s;
+}
+
+.ant-select-selector {
+  border-color: #111827 !important;
 }

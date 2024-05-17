@@ -1,7 +1,7 @@
 'use client'
 
 import Image from "next/image";
-import Logo from '../../app/logo1.png'
+import Logo from '../../app/logo.svg'
 import Link from "next/link";
 import SeachIcon from '@/assets/icons/search.svg'
 import { Modal, Select } from "antd";
@@ -9,11 +9,12 @@ import { useParams } from "next/navigation";
 import { useState } from "react";
 import { useRouter } from 'next/navigation';
 import ProcessingIcon from '../../../public/processing.svg'
+import Arrow from '../../../public/arrowDown.svg'
+import { DownOutlined } from '@ant-design/icons';
 
 const { Option } = Select;
 
 export default function MyHeader({t}: any) {
-  console.log(t)
   const [isOpen, setIsOpen] = useState(false);
   const [isModalVisible, setIsModalVisible] = useState(false)
 
@@ -85,6 +86,23 @@ export default function MyHeader({t}: any) {
               <li ><Link className="cool-link" href={'#'} onClick={() => handleModal()}>{t.menu3}</Link></li>
               <li > <Link className="cool-link" href={'#'} onClick={() => handleModal()}>{t.menu4}</Link></li>
               <li > <Link className="cool-link" href={'#'} onClick={() => handleModal()}>{t.menu5}</Link></li>
+              <Select
+            placeholder="Select a fruit"
+            className="w-[120px]"
+            defaultValue={locale === 'vi' ? '1' : '2'}
+            onChange={(e) => handleChangeLocale(e)}
+            removeIcon
+            suffixIcon={<DownOutlined />}
+          >
+            {items.map(item => (
+              <Option key={item.value} value={item.value}>
+                <div className="flex items-center">
+                  <img src={item.img} alt={item.label} style={{ width: 20, height: 20, marginRight: 8, borderRadius: '50%' }} />
+                  {item.label}
+                </div>
+              </Option>
+            ))}
+          </Select>
             </ul>
           </div>
         </div>
@@ -93,10 +111,10 @@ export default function MyHeader({t}: any) {
           <Image onClick={() => handleModal()} src={SeachIcon} width={23} height={23} alt="LOGO" className=" cursor-pointer" />
 
           <Select
-            placeholder="Select a fruit"
             className="w-[120px]"
             defaultValue={locale === 'vi' ? '1' : '2'}
             onChange={(e) => handleChangeLocale(e)}
+            suffixIcon={<Image src={Arrow} alt="Arrow"/>}
           >
             {items.map(item => (
               <Option key={item.value} value={item.value}>
