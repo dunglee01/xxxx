@@ -12,7 +12,8 @@ import ProcessingIcon from '../../../public/processing.svg'
 
 const { Option } = Select;
 
-export default function MyHeader() {
+export default function MyHeader({t}: any) {
+  console.log(t)
   const [isOpen, setIsOpen] = useState(false);
   const [isModalVisible, setIsModalVisible] = useState(false)
 
@@ -58,11 +59,11 @@ export default function MyHeader() {
 
         {/* MENU DESKTOP */}
         <div className="text-[18px] gap-[40px] text-[#111827] hidden lg:flex">
-          <Link className="cool-link" href={'#'} onClick={() => handleModal()}>Về DTak</Link>
-          <Link className="cool-link" href={'#'} onClick={() => handleModal()}>Sản phẩm</Link>
-          <Link className="cool-link" href={'#'} onClick={() => handleModal()}>Tin tức</Link>
-          <Link className="cool-link" href={'#'} onClick={() => handleModal()}>Tuyển dụng</Link>
-          <Link className="cool-link" href={'#'} onClick={() => handleModal()}>Liên hệ</Link>
+          <Link className="cool-link" href={'#'} onClick={() => handleModal()}>{t.menu1}</Link>
+          <Link className="cool-link" href={'#'} onClick={() => handleModal()}>{t.menu2}</Link>
+          <Link className="cool-link" href={'#'} onClick={() => handleModal()}>{t.menu3}</Link>
+          <Link className="cool-link" href={'#'} onClick={() => handleModal()}>{t.menu4}</Link>
+          <Link className="cool-link" href={'#'} onClick={() => handleModal()}>{t.menu5}</Link>
         </div> 
       </div>
 
@@ -79,11 +80,11 @@ export default function MyHeader() {
               <Image src={Logo} width={131} height={30} alt="LOGO" />
             </div>
             <ul>
-              <li ><Link className="cool-link" href={'#'} onClick={() => handleModal()}>Về DTak</Link></li>
-              <li ><Link className="cool-link" href={'#'} onClick={() => handleModal()}>Sản phẩm</Link></li>
-              <li ><Link className="cool-link" href={'#'} onClick={() => handleModal()}>Tin tức</Link></li>
-              <li > <Link className="cool-link" href={'#'} onClick={() => handleModal()}>Tuyển dụng</Link></li>
-              <li > <Link className="cool-link" href={'#'} onClick={() => handleModal()}>Liên hệ</Link></li>
+              <li ><Link className="cool-link" href={'#'} onClick={() => handleModal()}>{t.menu1}</Link></li>
+              <li ><Link className="cool-link" href={'#'} onClick={() => handleModal()}>{t.menu2}</Link></li>
+              <li ><Link className="cool-link" href={'#'} onClick={() => handleModal()}>{t.menu3}</Link></li>
+              <li > <Link className="cool-link" href={'#'} onClick={() => handleModal()}>{t.menu4}</Link></li>
+              <li > <Link className="cool-link" href={'#'} onClick={() => handleModal()}>{t.menu5}</Link></li>
             </ul>
           </div>
         </div>
@@ -113,15 +114,15 @@ export default function MyHeader() {
         visible={isModalVisible}
         onOk={handleOk}
         onCancel={handleCancel}
-        okText='Sang Chủ Tiệm'
-        cancelText='Bỏ qua'
+        okText={t.goto}
+        cancelText={t.cancel}
         centered
         closeIcon={false}
       >
         <div className="flex justify-center">
           <Image src={ProcessingIcon} alt="ProcessingIcon" className=" w-[400px]"/>
         </div>
-        <div className="text-[18px] font-bold mt-[20px]">Website đang trong quá trình xây dựng, mời bạn ghé qua Chủ Tiệm POS để xem tiếp nhé!</div>
+        <div className="text-[18px] font-bold mt-[20px]">{t.warning}</div>
       </Modal>
     </section>
   );

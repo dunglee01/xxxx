@@ -7,16 +7,54 @@ import ServiceCustom from "@/components/Service/Service";
 import News from "@/components/News/News";
 
 export default function Home() {
-  const t = useTranslations('')
+  const t = useTranslations('Index')
+
+  const contentIntro = {
+    intro1: t('intro1'),
+    intro2: t('intro2'),
+    intro3: t('intro3'),
+    intro4: t('intro4'),
+    intro5: t('intro5'),
+  }
+
+  const contentValueInfo = {
+    value1: t('value1'),
+    value2: t('value2'),
+  }
+
+  const contentProcess = {
+    process1: t('process1'),
+    process2: t('process2'),
+  }
+
+  const contentService = {
+    service1: t('service1'),
+    service2: t('service2'),
+    service3: t('service3'),
+    service4: t('service4'),
+    service5: t('service5'),
+    service6: t('service6'),
+    service7: t('service7'),
+    service8: t('service8'),
+    service9: t('service9'),
+    service10: t('service10'),
+  }
+
+  const contentNew = {
+    new1: t('new1'),
+    new2: t('new2')
+  }
+
+
   return (
     <>
-     <Intro />
+      <Intro contentIntro={contentIntro}/>
       <MyLayout>
-        <ValueIntro />
+      <ValueIntro contentValueInfo={contentValueInfo}/>
       </MyLayout>
-      <Process />
-      <ServiceCustom />
-      <News />
+      <Process contentProcess={contentProcess}/>
+      <ServiceCustom contentService={contentService}/>
+      <News contentNew={contentNew}/>
     </>
 
   );

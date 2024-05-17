@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import EmptyIMG from '../../../public/ImageView.png'
 import Image from "next/image";
 
-export default function SlickNews() {
+export default function SlickNews({content}: any) {
     const settings = {
         dots: false,
         infinite: true,
@@ -22,7 +22,7 @@ export default function SlickNews() {
     const renderItemsSlick = () => {
         return <div className="pr-[10px]">
             <Image src={EmptyIMG} alt="EmptyIMG" />
-            <div className="mt-[5px]">Nội dung tin tức nổi bật nhất của DTak</div>
+            <div className="mt-[5px]">{content}</div>
             <div className="text-[14px] text-[#555555] font-normal">Category | 01/01/2024</div>
         </div>
     }

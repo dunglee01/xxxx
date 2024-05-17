@@ -5,9 +5,10 @@ import ArrowIcon from '../../assets/icons/arrow.svg'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
+import Slider1 from '../../../public/slider1.png'
 
 
-export default function SlickCustom() {
+export default function SlickCustom({contentIntro}: any) {
     let sliderRef: any = useRef(null);
     const [activeSlide, setActiveSlide] = useState(0);
 
@@ -38,18 +39,20 @@ export default function SlickCustom() {
 
     const RenderSlider = () => {
         return (<div className="h-[500px] relative">
-            <div className=" absolute w-full h-[250px] md:h-[336px] md:w-[500px] lg:w-[700px] lg:h-[420px] img-slider1 lg:img-slider1Des border-4 border-[#fff] rounded-lg z-0" />
+            <div className=" absolute z-0" >
+                <Image src={Slider1} alt="Slider1" className="md:h-[336px] md:w-[500px] lg:h-[420px]  lg:w-[700px]"/>
+            </div>
             <div className="info-slider absolute top-[100px] h-[386px] md:w-[468px] md:right-0 w-full z-1 rounded-lg pt-[28px] pl-[20px] pr-[34px]">
-                <div className="text-[24px] lg:text-[32px] font-bold text-[#554AF0]">Chuyển đổi số...</div>
-                <div className="text-[24px] lg:text-[32px] font-bold text-[#554AF0]">có quá muộn để bắt đầu?</div>
-                <div className="text-[14px] text-[#111827] mt-[15px]">
-                    - Trí tuệ nhận tạo (AI) và máy học, các công nghệ hiện hữu đang giúp rất nhiều doanh nghiệp tiết kiệm 70% chi phí bộ máy nhân sự và vận hành!
+                <div className="text-[24px] lg:text-[32px] font-bold text-[#554AF0]">{contentIntro.intro1}</div>
+                <div className="text-[24px] lg:text-[32px] font-bold text-[#554AF0]">{contentIntro.intro2}</div>
+                <div className="text-[14px] md:text-[16px] text-[#111827] mt-[15px]">
+                {contentIntro.intro3}
                 </div>
-                <div className="text-[14px] text-[#111827]">
-                    - Tuy nhiên chúng sẽ vô dụng nếu doanh nghiệp của bạn vẫn đang dùng giấy tờ, Excel thủ công với các quy trình và dữ liệu không được chuẩn hóa.
+                <div className="text-[14px] md:text-[16px] text-[#111827]">
+                {contentIntro.intro4}
                 </div>
-                <div className="text-[14px] text-[#111827]">
-                    *Câu hỏi? Thay đổi để phát triển hay chấp nhận tụt lại phía sau?
+                <div className="text-[14px] md:text-[16px] text-[#111827]">
+                {contentIntro.intro5}
                 </div>
             </div>
         </div>)

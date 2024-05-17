@@ -11,7 +11,7 @@ import { Modal } from "antd";
 import { useState } from "react";
 import ProcessingIcon from '../../../public/processing.svg'
 
-export default function MyFooter() {
+export default function MyFooter({contentFooter}:any) {
   const [isModalVisible, setIsModalVisible] = useState(false)
 
   const handleOk = () => {
@@ -35,26 +35,26 @@ export default function MyFooter() {
         </div>
         <div className="flex flex-col lg:flex-row justify-between">
           <div className="mt-[30px]">
-            <div className="text-[32px] font-bold">Công ty TNHH DTAK</div>
-            <div>Trụ sở: Số 8/10, ngõ 19, Trần Quang Diệu, Đống Đa, Hà Nội</div>
+            <div className="text-[32px] font-bold">{contentFooter.footer1}</div>
+            <div>{contentFooter.footer2}</div>
             <div>Phone:(+84) 9146.123.88</div>
             <div>Email: <a href="mailto:ducbt@dtak.vn">ducbt@dtak.vn</a></div>
             <div>Website: <a href="https://dtak.vn" className=":hover:color-[red]" target="_blank">https://dtak.vn</a> | <a target="_blank" href="https://chutiem.vn">https://chutiem.vn</a></div>
           </div>
 
           <div className="mt-[30px] lg:mt-[-20px] flex flex-col">
-            <div className="text-[32px] font-bold">Thông tin</div>
+            <div className="text-[32px] font-bold">{contentFooter.footer3}</div>
             <div>
             <a className="cool-link" onClick={() => handleModal()}>Về DTak</a>
             </div>
             <div>
-            <a className="cool-link" onClick={() => handleModal()}>Liên hệ</a>
+            <a className="cool-link" onClick={() => handleModal()}>{contentFooter.footer4}</a>
             </div>
             <div>
-            <a className="cool-link" onClick={() => handleModal()}>Điều khoản sử dụng</a>
+            <a className="cool-link" onClick={() => handleModal()}>{contentFooter.footer5}</a>
             </div>
             <div>
-            <a className="cool-link" onClick={() => handleModal()}>Chính sách bảo mật</a>
+            <a className="cool-link" onClick={() => handleModal()}>{contentFooter.footer6}</a>
             </div>
           </div>
 
@@ -67,10 +67,10 @@ export default function MyFooter() {
             <a className="cool-link" onClick={() => handleModal()}>Outsource</a>
             </div>
             <div>
-            <a className="cool-link" onClick={() => handleModal()}>Quy trình & Giải pháp</a>
+            <a className="cool-link" onClick={() => handleModal()}>{contentFooter.footer8}</a>
             </div>
             <div>
-            <a className="cool-link" onClick={() => handleModal()}>Thuê chuyên  giá & kỹ sư CNTT</a>
+            <a className="cool-link" onClick={() => handleModal()}>{contentFooter.footer9}</a>
             </div>
           </div>
         </div>
@@ -84,10 +84,10 @@ export default function MyFooter() {
             <Image src={YT} alt="FB" style={{width: '25px', height:'35px'}} />
             </a>
             <a href="https://zalo.me/g/mmnrnb345" target="_blank">
-            <Image src={Link} alt="FB" style={{width: '25px', height:'35px'}} />
+            <Image src={Link} alt="FB" style={{width: '25px', height:'20px'}} />
             </a>
             <a href="mailto:chutiem@chutiem.vn" target="_blank">
-            <Image src={Email} alt="FB"  style={{width: '25px', height:'35px'}}/>
+            <Image src={Email} alt="FB"  style={{width: '25px', height:'17px'}}/>
             </a>
           </div>
 

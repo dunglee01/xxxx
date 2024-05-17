@@ -19,23 +19,26 @@
 .hamburger-menu-container {
   position: relative;
   z-index: 10;
+  display: flex;
+  align-items: center;
 }
 
 .hamburger-icon {
-  width: 35px;
-  height: 30px;
+  width: 22px;
+  height: 18px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
   z-index: 20;
+  align-items: center;
 }
 
 .hamburger-icon span {
   display: block;
   width: 100%;
-  height: 4px;
-  background-color: #333;
+  height: 3px;
+  background-color: #7E7E7E;
   border-radius: 2px;
   transition: transform 0.3s, opacity 0.3s;
 }
@@ -49,7 +52,7 @@
 }
 
 .hamburger-icon.open span:nth-child(3) {
-  transform: translateY(-10px) rotate(-45deg);
+  transform: translateY(1px) rotate(-45deg);
 }
 
 .side-menu {
@@ -62,7 +65,6 @@
   color: #333;
   transform: translateX(-100%);
   transition: transform 0.3s ease-in-out;
- 
 }
 
 .side-menu.open {
@@ -98,7 +100,7 @@
 .img-slider1Des {
   background: url('../../../public/slider1.png');
   background-repeat: no-repeat;
-  background-size: 110%;
+  background-size: 100%;
   object-fit: cover;
   background-position: center;
 }
