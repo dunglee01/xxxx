@@ -7,7 +7,7 @@
         "menu4": "Recruitment",
         "menu5": "Contact",
         "warning": "Website is under construction, please stop by POS Shop Owner to see more!",
-        "goto": "To the Chủ Tiệm",
+        "goto": "To the Chu Tiem",
         "cancel": "Cancel",
         "intro1": "Digital transformation...",
         "intro2": "Is it too late to start?",
@@ -39,6 +39,10 @@
         "footer7": "Chủ Tiệm POS",
         "footer8": "Process & Solution",
         "footer9": "Hire IT experts & engineers",
-        "footer10": "DTAK Digital Solutions Company Limited"
+        "footer10": "DTAK Digital Solutions Company Limited",
+        "footer11": "Website is under construction, please stop by POS Shop Owner to see more!",
+        "footer12": "Cancel",
+        "footer13": "To the Chu Tiem",
+        "footer14": "About DTak"
     }
 }

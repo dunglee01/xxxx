@@ -43,6 +43,10 @@ export default function RootLayout({
     footer8: t('footer8'),
     footer9: t('footer9'),
     footer10: t('footer10'),
+    footer11: t('footer11'),
+    footer12: t('footer12'),
+    footer13: t('footer13'),
+    footer14: t('footer14'),
   }
 
   return (

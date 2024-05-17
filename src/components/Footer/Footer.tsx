@@ -45,7 +45,7 @@ export default function MyFooter({contentFooter}:any) {
           <div className="mt-[30px] lg:mt-[-20px] flex flex-col">
             <div className="text-[32px] font-bold">{contentFooter.footer3}</div>
             <div>
-            <a className="cool-link" onClick={() => handleModal()}>Về DTak</a>
+            <a className="cool-link" onClick={() => handleModal()}>{contentFooter.footer14}</a>
             </div>
             <div>
             <a className="cool-link" onClick={() => handleModal()}>{contentFooter.footer4}</a>
@@ -93,7 +93,7 @@ export default function MyFooter({contentFooter}:any) {
 
           <div className="mt-[30px] lg:mt-0">
             <div className="text-[#555555] font-normal">© {new Date().getFullYear()} DTAK DIGITAL SOLUTIONS CO.,LTD. All rights reserved</div>
-            <div className="text-[#555555] font-normal">Công ty TNHH Giải Pháp Số DTAK | MST: 0110696855</div>
+            <div className="text-[#555555] font-normal">{contentFooter.footer10} | MST: 0110696855</div>
           </div>
         </div>
       </div>
@@ -101,15 +101,15 @@ export default function MyFooter({contentFooter}:any) {
         visible={isModalVisible}
         onOk={handleOk}
         onCancel={handleCancel}
-        okText='Sang Chủ Tiệm'
-        cancelText='Bỏ qua'
+        okText={contentFooter.footer13}
+        cancelText={contentFooter.footer12}
         centered
         closeIcon={false}
       >
         <div className="flex justify-center">
           <Image src={ProcessingIcon} alt="ProcessingIcon" className=" w-[400px]"/>
         </div>
-        <div className="text-[18px] font-bold mt-[20px]">Website đang trong quá trình xây dựng, mời bạn ghé qua Chủ Tiệm POS để xem tiếp nhé!</div>
+        <div className="text-[18px] font-bold mt-[20px]">{contentFooter.footer11}</div>
       </Modal>
     </MyLayout>
   );

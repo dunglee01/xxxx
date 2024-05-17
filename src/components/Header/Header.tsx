@@ -90,7 +90,7 @@ export default function MyHeader({t}: any) {
         </div>
 
         <div className="hidden gap-[10px] md:flex">
-          <Image src={SeachIcon} width={23} height={23} alt="LOGO" className=" cursor-pointer" />
+          <Image onClick={() => handleModal()} src={SeachIcon} width={23} height={23} alt="LOGO" className=" cursor-pointer" />
 
           <Select
             placeholder="Select a fruit"
